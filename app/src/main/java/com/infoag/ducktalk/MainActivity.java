@@ -13,23 +13,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // if login data is present: launch ContactViewActivity, else: launch LogInActivity
+
         SharedPreferences sp = getSharedPreferences("logIn", MODE_PRIVATE);
         String username = sp.getString("username", null);
-        String password = sp.getString("password", null);
 
-        // try login
-
-        boolean success = false;
-
-        if (success) {
-
-            Intent intent = new Intent(this, ContactViewActivity.class);
+        if (username == null) {
+            Intent intent = new Intent(this, LogInActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
-
         } else {
-
-            Intent intent = new Intent(this, LogInActivity.class);
+            Intent intent = new Intent(this, ContactViewActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NO_ANIMATION);
             startActivity(intent);
         }
