@@ -14,7 +14,7 @@ public class RetrofitSingleton {
 
     private RetrofitSingleton() {}
 
-    static synchronized DuckTalkService getInstance() {
+    public static synchronized DuckTalkService getInstance() {
         return instance;
     }
 }
