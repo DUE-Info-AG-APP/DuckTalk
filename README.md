@@ -84,3 +84,6 @@ Required Headers:
 ```
 Authorization: BASIC username:password in BASE64
 ```
+
+# Library Documentation
+https://square.github.io/retrofit/
