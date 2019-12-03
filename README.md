@@ -28,10 +28,8 @@ contacts: character varying[] (255)
 GET /users
 ```
 Returned Status Codes:
-```
-200 OK
-500 Internal Server Error
-```
+```200 OK```
+```500 Internal Server Error```
 
 #### Create new user
 ```
