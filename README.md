@@ -28,9 +28,10 @@ contacts: character varying[] (255)
 GET /users
 ```
 Returned Status Codes:
-```200 OK```
-
-```500 Internal Server Error```
+```
+200 OK
+500 Internal Server Error
+```
 
 #### Create new user
 ```
@@ -41,10 +42,12 @@ POST /users
 }
 ```
 Returned Status Codes:
+```
 201 Created
 400 Bad Request
 409 Conflict: username already in use
 500 Internal Server Error
+```
 
 #### Get data of specific user
 ```
