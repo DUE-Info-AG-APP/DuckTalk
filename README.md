@@ -29,6 +29,7 @@ GET /users
 ```
 Returned Status Codes:
 ```200 OK```
+
 ```500 Internal Server Error```
 
 #### Create new user
