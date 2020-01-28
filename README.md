@@ -57,6 +57,14 @@ Required Headers:
 ```
 Authorization: BASIC username:password in BASE64
 ```
+Returned Status Codes:
+```
+200 OK
+404 Not Found
+401 Unauthorized: authentication header not provided correctly
+403 Forbidden: wrong username or password
+500 Internal Server Error
+```
 
 #### Add contact to user
 ```
@@ -68,6 +76,15 @@ POST /users/{username}/contacts
 Required Headers:
 ```
 Authorization: BASIC username:password in BASE64
+```
+Returned Status Codes:
+```
+201 Created
+404 Not Found: user specified in URL or user specified in payload not found
+401 Unauthorized: authentication header not provided correctly
+403 Forbidden: wrong username or password
+409: Conflict: user specified in payload is already a contact of user specified in URL
+500 Internal Server Error
 ```
 
 #### Send message
@@ -84,6 +101,16 @@ Required Headers:
 ```
 Authorization: BASIC username:password in BASE64
 ```
+Returned Status Codes:
+```
+201 Created
+400 Bad Request (-> timestamp probably provided in wrong format)
+404 Not Found: sender or recipient not found
+401 Unauthorized: authentication header not provided correctly
+403 Forbidden: wrong username or password
+500 Internal Server Error
+```
+
 
 #### Get messages
 relating to specified sender and recipient
