@@ -113,7 +113,7 @@ Returned Status Codes:
 
 
 #### Get messages
-relating to specified sender and recipient
+related to specified sender and recipient
 where authorization has to be provided with either the
 senders or the recipients credentials
 ```
